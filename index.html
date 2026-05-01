@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)file:///Users/andrewoxley/Downloads/index_23.html -->
+<!-- saved from url=(0049)file:///Users/andrewoxley/Downloads/index_29.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>💍 Will &amp; Ella — May 22, 2027</title>
-<link href="file:///Users/andrewoxley/Downloads/index_files/css2" rel="stylesheet">
+<link href="./index_files/css2" rel="stylesheet">
 <style>
 :root {
   --orange: #D63384;
@@ -306,8 +306,8 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text);min
 .calc-result{font-weight:700;color:var(--orange);font-size:1em;min-width:80px;}
 </style>
   <!-- Firebase SDK (compat) -->
-  <script src="file:///Users/andrewoxley/Downloads/index_files/firebase-app-compat.js"></script>
-  <script src="file:///Users/andrewoxley/Downloads/index_files/firebase-firestore-compat.js"></script>
+  <script src="./index_files/firebase-app-compat.js"></script>
+  <script src="./index_files/firebase-firestore-compat.js"></script>
 <script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script><script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script></head>
 <body>
 
@@ -320,14 +320,14 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text);min
   <div class="header-sub">Saturday · May 22, 2027</div>
   <div class="header-venue">⛳ The Georgia Club · Statham, GA</div>
   <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:5px;">
-    <div id="sync-status" style="font-size:.62em;color:rgba(255,255,255,.45);letter-spacing:1px;">☁️ Synced · 10:05 AM</div>
+    <div id="sync-status" style="font-size:.62em;color:rgba(255,255,255,.45);letter-spacing:1px;">☁️ Synced · 11:26 AM</div>
     <button onclick="pushShared();pushFinance();setSyncStatus(&#39;☁️ Pushed!&#39;)" title="Force sync to cloud" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.6);border-radius:6px;padding:2px 8px;font-size:.6em;cursor:pointer;letter-spacing:.5px;">↑ Sync</button>
   </div>
   <div class="countdown" id="countdown">
     <div class="cd-unit"><span class="cd-num" id="cd-days">386</span><span class="cd-lbl">Days</span></div>
-    <div class="cd-unit"><span class="cd-num" id="cd-hours">05</span><span class="cd-lbl">Hours</span></div>
-    <div class="cd-unit"><span class="cd-num" id="cd-mins">53</span><span class="cd-lbl">Minutes</span></div>
-    <div class="cd-unit"><span class="cd-num" id="cd-secs">12</span><span class="cd-lbl">Seconds</span></div>
+    <div class="cd-unit"><span class="cd-num" id="cd-hours">04</span><span class="cd-lbl">Hours</span></div>
+    <div class="cd-unit"><span class="cd-num" id="cd-mins">33</span><span class="cd-lbl">Minutes</span></div>
+    <div class="cd-unit"><span class="cd-num" id="cd-secs">05</span><span class="cd-lbl">Seconds</span></div>
   </div>
 </header>
 
@@ -1364,11 +1364,18 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text);min
         <td style="padding:7px 10px;text-align:right;color:var(--success);">—</td>
         <td style="padding:7px 10px;text-align:right;color:var(--warning);">$1,000.00</td>
         <td style="padding:7px 10px;text-align:center;"></td>
+      </tr><tr style="">
+        <td style="padding:7px 10px;font-weight:600;">Venue</td>
+        <td style="padding:7px 10px;font-size:.82em;color:var(--text-light);">Payment 2</td>
+        <td style="padding:7px 10px;text-align:right;">$10,000.00</td>
+        <td style="padding:7px 10px;text-align:right;color:var(--success);">—</td>
+        <td style="padding:7px 10px;text-align:right;color:var(--warning);">$10,000.00</td>
+        <td style="padding:7px 10px;text-align:center;"></td>
       </tr><tr style="background:var(--purple);color:#fff;font-weight:700;">
     <td colspan="2" style="padding:9px 10px;">TOTAL</td>
-    <td style="padding:9px 10px;text-align:right;">$1,000.00</td>
+    <td style="padding:9px 10px;text-align:right;">$11,000.00</td>
     <td style="padding:9px 10px;text-align:right;">$0.00</td>
-    <td style="padding:9px 10px;text-align:right;">$1,000.00</td>
+    <td style="padding:9px 10px;text-align:right;">$11,000.00</td>
     <td style="padding:9px 10px;"></td>
   </tr></tbody>
   </table></div>
@@ -1376,10 +1383,10 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text);min
 
     <!-- Budget Summary -->
     <div class="stats-grid">
-      <div class="stat o"><span class="stat-n" id="fin-total-budget">--</span><span class="stat-l">Total Budget</span></div>
-      <div class="stat p"><span class="stat-n" id="fin-committed">--</span><span class="stat-l">Committed</span></div>
-      <div class="stat g"><span class="stat-n" id="fin-paid">--</span><span class="stat-l">Total Paid</span></div>
-      <div class="stat"><span class="stat-n" id="fin-remaining">--</span><span class="stat-l">Still Due</span></div>
+      <div class="stat o"><span class="stat-n" id="fin-total-budget">$50,000.00</span><span class="stat-l">Total Budget</span></div>
+      <div class="stat p"><span class="stat-n" id="fin-committed">$11,000.00</span><span class="stat-l">Committed</span></div>
+      <div class="stat g"><span class="stat-n" id="fin-paid">$0.00</span><span class="stat-l">Total Paid</span></div>
+      <div class="stat"><span class="stat-n" id="fin-remaining">$11,000.00</span><span class="stat-l">Still Due</span></div>
     </div>
 
     <!-- Budget Input -->
@@ -1757,7 +1764,7 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text);min
 </div>
 
 <!-- Toast -->
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast">Saved ✓</div>
 
 <!-- Footer -->
 <footer style="text-align:center;padding:28px 20px;color:var(--text-light);font-size:.82em;border-top:2px solid var(--border);margin-top:40px;">
@@ -1813,8 +1820,10 @@ function pushShared() {
 // Push finance data to Firestore
 function pushFinance() {
   if (!cloudSyncEnabled) return;
+  const data = localStorage.getItem('we_finance') || '';
   FINANCE_DOC.set({
-    we_finance: localStorage.getItem('we_finance') || '',
+    we_finance: data,
+    ma_finance: data,
     we_fv: '2',
     _tab: MY_TAB
   }).catch(e => console.warn('Finance sync err:', e));
@@ -1823,7 +1832,11 @@ function pushFinance() {
 // Apply cloud doc fields back into localStorage
 function applyCloudData(data) {
   Object.keys(data).forEach(k => {
-    if ((k.startsWith('ma_') || k.startsWith('we_')) && data[k] != null) localStorage.setItem(k, data[k]);
+    if ((k.startsWith('ma_') || k.startsWith('we_')) && data[k] != null) {
+      localStorage.setItem(k, data[k]);
+    }
+    // Also handle old ma_finance key from cloud, map it to we_finance
+    if (k === 'ma_finance' && data[k]) localStorage.setItem('we_finance', data[k]);
   });
 }
 
@@ -2828,7 +2841,14 @@ async function init() {
       cloudWasEmpty = true;
       setSyncStatus('☁️ Connected');
     }
-    if (finSnap.exists) applyCloudData(finSnap.data());
+    if (finSnap.exists) {
+      applyCloudData(finSnap.data());
+      // Migrate old ma_finance key to we_finance if we_finance not yet set
+      const d = finSnap.data();
+      if (!localStorage.getItem('we_finance') && d.ma_finance) {
+        localStorage.setItem('we_finance', d.ma_finance);
+      }
+    }
   } catch(e) {
     console.warn('Cloud unavailable, using local data:', e);
     setSyncStatus('⚠️ Offline — using local data');
