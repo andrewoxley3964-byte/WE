@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)file:///Users/andrewoxley/Downloads/index_22.html -->
+<!-- saved from url=(0049)file:///Users/andrewoxley/Downloads/index_23.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -308,7 +308,7 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text);min
   <!-- Firebase SDK (compat) -->
   <script src="file:///Users/andrewoxley/Downloads/index_files/firebase-app-compat.js"></script>
   <script src="file:///Users/andrewoxley/Downloads/index_files/firebase-firestore-compat.js"></script>
-<script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script></head>
+<script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script><script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script></head>
 <body>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -1376,10 +1376,10 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text);min
 
     <!-- Budget Summary -->
     <div class="stats-grid">
-      <div class="stat o"><span class="stat-n" id="fin-total-budget">$40,000.00</span><span class="stat-l">Total Budget</span></div>
-      <div class="stat p"><span class="stat-n" id="fin-committed">$1,000.00</span><span class="stat-l">Committed</span></div>
-      <div class="stat g"><span class="stat-n" id="fin-paid">$0.00</span><span class="stat-l">Total Paid</span></div>
-      <div class="stat"><span class="stat-n" id="fin-remaining">$1,000.00</span><span class="stat-l">Still Due</span></div>
+      <div class="stat o"><span class="stat-n" id="fin-total-budget">--</span><span class="stat-l">Total Budget</span></div>
+      <div class="stat p"><span class="stat-n" id="fin-committed">--</span><span class="stat-l">Committed</span></div>
+      <div class="stat g"><span class="stat-n" id="fin-paid">--</span><span class="stat-l">Total Paid</span></div>
+      <div class="stat"><span class="stat-n" id="fin-remaining">--</span><span class="stat-l">Still Due</span></div>
     </div>
 
     <!-- Budget Input -->
@@ -1814,8 +1814,8 @@ function pushShared() {
 function pushFinance() {
   if (!cloudSyncEnabled) return;
   FINANCE_DOC.set({
-    ma_finance: localStorage.getItem('we_finance') || '',
-    ma_fv: localStorage.getItem('we_fv') || '2',
+    we_finance: localStorage.getItem('we_finance') || '',
+    we_fv: '2',
     _tab: MY_TAB
   }).catch(e => console.warn('Finance sync err:', e));
 }
@@ -1823,7 +1823,7 @@ function pushFinance() {
 // Apply cloud doc fields back into localStorage
 function applyCloudData(data) {
   Object.keys(data).forEach(k => {
-    if (k.startsWith('ma_') && data[k] != null) localStorage.setItem(k, data[k]);
+    if ((k.startsWith('ma_') || k.startsWith('we_')) && data[k] != null) localStorage.setItem(k, data[k]);
   });
 }
 
@@ -1853,6 +1853,9 @@ function setupCloudListeners() {
     if (!snap.exists) return;
     const d = snap.data();
     if (d._tab === MY_TAB) return;
+    const finUnlocked = document.getElementById('finance-content') &&
+                        document.getElementById('finance-content').classList.contains('unlocked');
+    if (finUnlocked) return;
     applyCloudData(d);
     refreshFinance();
   }, e => console.warn('Finance listener err:', e));
@@ -2867,4 +2870,4 @@ init();
 </script>
 
 
-<div class="calendly-lifecycle-optibutton_singleton"><template shadowrootmode="closed"><div class="calendly-opti-root"></div></template></div><div class="calendly-frame-tag" manager_id="05df0cf4-ba7d-4a5e-80e8-6e0789ccd5d0" id="05df0cf4-ba7d-4a5e-80e8-6e0789ccd5d0" style="height: 0px; width: 0px; visibility: hidden;"></div></body></html>
+<div class="calendly-frame-tag" manager_id="b034aaa1-b5ec-458a-a428-deb82494bf8f" id="b034aaa1-b5ec-458a-a428-deb82494bf8f" style="height: 0px; width: 0px; visibility: hidden;"></div><div class="calendly-lifecycle-optibutton_singleton"><template shadowrootmode="closed"><div class="calendly-opti-root"></div></template></div></body></html>
